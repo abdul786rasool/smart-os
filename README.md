@@ -11,8 +11,8 @@ Follow these steps to set up the project on your local machine.
 
 Clone the repository to your local machine using Git:
 
-git clone https://github.com/yourusername/projectname.git
-cd projectname
+git clone https://github.com/abdul786rasool/smart-os.git
+cd smart-os
 
 ### 2. Create and Activate a Virtual Environment
 
@@ -39,10 +39,15 @@ pip install -r requirements.txt
 Create a `.env` file in the root of your project directory and add the following credentials:
 
 GOOGLE_API_KEY=your_google_api_key
+
 GOOGLE_APPLICATION_CREDENTIALS=path_to_your_google_application_credentials
+
 GOOGLE_PROJECT_ID=your_google_project_id
+
 BRAVE_API_KEY=your_brave_api_key
+
 DESKTOP=path_to_your_desktop
+
 DOWNLOADS=path_to_your_downloads
 
 ### 5. Run the Application
@@ -57,6 +62,6 @@ In the Streamlit app, you'll find three options in the sidebar:
 
 - **Fetch all files:** Click this to retrieve all necessary files.
 - **Create Embeddings:** Click this to generate embeddings. (Note: This process may take 2-3 hours.)
-- **Update all files:** Click this to update the files after the embeddings are created.
+ No need to do update files.
 
 Complete these steps one by one for the best results.
