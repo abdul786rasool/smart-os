@@ -64,4 +64,21 @@ In the Streamlit app, you'll find three options in the sidebar:
 - **Create Embeddings:** Click this to generate embeddings. (Note: This process may take 2-3 hours.)
  No need to do update files.
 
-Complete these steps one by one for the best results.
+Complete these steps.
+
+# Smart-OS
+
+Smart-OS is a chatbot-driven application designed to control your operating system with ease. The core idea is to manage various OS functions through a chatbot interface. Here are some key features:
+
+- **System Control**: Adjust system brightness, search for or open applications and files.
+- **File Search with FAISS**: The application uses FAISS embeddings for efficient file search. Embeddings for all files on your laptop are created and saved locally, which speeds up file retrieval compared to traditional name-based search. To create embeddings for all files, use the 'Fetch all files' and 'Create Embeddings' options in the Streamlit app when running it for the first time. Use 'Update all files' to refresh embeddings if files are added, deleted, or modified.
+- **Application Launching**: The app can open various applications. Once an app is opened for the first time, it will be faster to open subsequently as paths are saved.
+- **Settings and Commands**: The app can open different system settings and has access to the PowerShell terminal for executing commands.
+- **GitHub Integration**: Push folders to GitHub with proper instructions.
+- **Web and YouTube Search**: Perform web searches using Brave Search and search for YouTube URLs using the LangChain-YouTube tool.
+- **URL Operations**: Open URLs and download images from them.
+- **File Creation**: Create files with different extensions, such as .txt, .py, .html, etc.
+- **Tool Visibility**: In the Streamlit app, use the 'Show Tools' option to view the underlying tool calls during execution.
+
+For detailed setup instructions, please refer to the [Setup Instructions](#setup-instructions) section in this repository.
+
