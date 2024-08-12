@@ -57,7 +57,7 @@ class Files_Handler():
         else:
             with open(self.all_files_path, 'rb') as f:
                 self.all_files_index = pickle.load(f)  
-        self.all_files = list(self.all_files_index.keys()).copy()
+                self.all_files = list(self.all_files_index.keys()).copy()
   
     def save_files(self):
         with open(self.all_files_path, 'wb') as f:
