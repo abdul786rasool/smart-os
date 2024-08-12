@@ -81,5 +81,6 @@ Smart-OS is a chatbot-driven application designed to control your operating syst
 - **Tool Visibility**: In the Streamlit app, use the 'Show Tools' option to view the underlying tool calls during execution.
 
 For detailed setup instructions, please refer to the [Setup Instructions](#setup-instructions) section in this repository.
+
 Demo video : https://www.youtube.com/watch?v=enJkl2PN-38
 
