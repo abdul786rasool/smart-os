@@ -67,6 +67,7 @@ with st.sidebar:
         if fetch:
             st.write("Fetching files.. Don't retry until it's done.")
             files_handler.all_files_index = files_handler.index_files_and_directories(files_handler.root_paths) 
+            files_handler.all_files = list(files_handler.all_files_index.keys()).copy()
             files_handler.save_files()
             st.write('Fetching completed.')    
 
