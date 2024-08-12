@@ -44,7 +44,7 @@ GOOGLE_APPLICATION_CREDENTIALS=path_to_your_google_application_credentials
 
 GOOGLE_PROJECT_ID=your_google_project_id
 
-BRAVE_API_KEY=your_brave_api_key
+BRAVE_API_KEY=your_brave_api_key (required if you want to do web-search)
 
 DESKTOP=path_to_your_desktop
 
