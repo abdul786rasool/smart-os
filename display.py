@@ -130,4 +130,3 @@ def run_command(
     gui.open()
     gui.update(f"-----------------------------------------------------------------------------{printer}")
     return printer
-
