@@ -7,12 +7,11 @@ from typing import Annotated, Literal, List
 from langchain_core.output_parsers import BaseOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain.retrievers.multi_query import MultiQueryRetriever
-from gemini_llm import llm
+from gemini_llm import llm_gem as llm
 from dotenv import load_dotenv
 
 # Load environment variables from the .env file
 load_dotenv()
-
 
 
 class Files_Handler():
@@ -57,7 +56,7 @@ class Files_Handler():
         else:
             with open(self.all_files_path, 'rb') as f:
                 self.all_files_index = pickle.load(f)  
-                self.all_files = list(self.all_files_index.keys()).copy()
+        self.all_files = list(self.all_files_index.keys()).copy()
   
     def save_files(self):
         with open(self.all_files_path, 'wb') as f:
@@ -170,6 +169,7 @@ def get_default_paths(
             return 'App name is not given.'
         if path is None:
             return 'Path for app is not given.'
+        path = os.path.normpath(path)
         files_handler.default_paths[app_name] = path 
         files_handler.save_default_paths()
         return f'The app is successfully updated in default paths.'
