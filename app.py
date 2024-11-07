@@ -3,7 +3,7 @@ from langchain_core.messages import HumanMessage, ToolMessage, AIMessage
 import asyncio
 import shelve
 import os
-from bot import agent_executor
+from bot import agent_executor_gem, agent_executor_gpt
 from handle_system_files import files_handler
 import base64
 
@@ -53,6 +53,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+with st.sidebar:
+    st.title("Select Model")
+    model_option = st.radio("Choose the language model:", ["GPT-3.5", "Gemini 1.5 Flash"])
+
+if model_option == "GPT-3.5":
+    agent_executor = agent_executor_gpt
+elif model_option == "Gemini 1.5 Flash":
+    agent_executor = agent_executor_gem  
 
 with st.sidebar:
     with st.expander("Fetch all files"):
@@ -67,7 +75,6 @@ with st.sidebar:
         if fetch:
             st.write("Fetching files.. Don't retry until it's done.")
             files_handler.all_files_index = files_handler.index_files_and_directories(files_handler.root_paths) 
-            files_handler.all_files = list(files_handler.all_files_index.keys()).copy()
             files_handler.save_files()
             st.write('Fetching completed.')    
 
@@ -157,5 +164,3 @@ if prompt := st.chat_input("How can I help?"):
 # Save chat history after each interaction
 save_chat_history(st.session_state.messages)        
         
-
-
