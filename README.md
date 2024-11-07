@@ -50,6 +50,8 @@ DESKTOP=path_to_your_desktop
 
 DOWNLOADS=path_to_your_downloads
 
+OPENAI_API_KEY = open ai api key (If you want to use gpt 3.5 model, otherwise not needed)
+
 ### 5. Run the Application
 
 Start the application using Streamlit:
