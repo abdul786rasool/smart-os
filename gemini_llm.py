@@ -9,7 +9,7 @@ load_dotenv()
 
 
 
-llm = ChatVertexAI(model="gemini-1.5-flash",
+llm_gem = ChatVertexAI(model="gemini-1.5-flash",
                    project=os.getenv('GOOGLE_PROJECT_ID'),
                    max_retries=4,
                    temperature = 0.0,
@@ -21,9 +21,3 @@ llm = ChatVertexAI(model="gemini-1.5-flash",
   HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_ONLY_HIGH,
 }
   ) 
-
-
-
-
-
-
