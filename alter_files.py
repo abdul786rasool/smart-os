@@ -180,8 +180,3 @@ def file_editor(
             return f'The file {file_path} is modified with new content.'
     else: 
         return f'No content is given.'       
-
-      
-
-
-
