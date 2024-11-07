@@ -55,7 +55,11 @@ st.markdown(
 
 with st.sidebar:
     st.title("Select Model")
-    model_option = st.radio("Choose the language model:", ["GPT-3.5", "Gemini 1.5 Flash"])
+    if agent_executor_gpt:
+        model_option = st.radio("Choose the language model:", ["GPT-3.5", "Gemini 1.5 Flash"])
+    else:
+        model_option = st.radio("Choose the language model:", ["Gemini 1.5 Flash"])
+        
 
 if model_option == "GPT-3.5":
     agent_executor = agent_executor_gpt
